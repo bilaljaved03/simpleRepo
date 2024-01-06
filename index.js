@@ -18,7 +18,6 @@ const pool = new Pool({
 app.use(cors({
   origin: 'http://localhost:3000', // Allow requests from your React app
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: '*',
   credentials: true // Allow cookies and other credentials
 }));
 app.use(express.json());
