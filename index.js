@@ -15,8 +15,11 @@ const connectionString =
 const pool = new Pool({
   connectionString: connectionString,
 });
-
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: '*',
+  credentials: true // Allow cookies and other credentials
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded());
